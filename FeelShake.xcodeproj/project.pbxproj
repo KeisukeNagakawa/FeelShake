@@ -8,26 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		300B5AE3200F834600FC4610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5AE2200F834600FC4610 /* AppDelegate.swift */; };
-		300B5AE5200F834600FC4610 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 300B5AE4200F834600FC4610 /* GameScene.sks */; };
-		300B5AE7200F834600FC4610 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 300B5AE6200F834600FC4610 /* Actions.sks */; };
-		300B5AE9200F834600FC4610 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5AE8200F834600FC4610 /* GameScene.swift */; };
+		300B5AE5200F834600FC4610 /* TrainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 300B5AE4200F834600FC4610 /* TrainScene.sks */; };
+		300B5AE9200F834600FC4610 /* TrainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5AE8200F834600FC4610 /* TrainScene.swift */; };
 		300B5AEB200F834600FC4610 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5AEA200F834600FC4610 /* GameViewController.swift */; };
 		300B5AEE200F834600FC4610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300B5AEC200F834600FC4610 /* Main.storyboard */; };
 		300B5AF0200F834600FC4610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300B5AEF200F834600FC4610 /* Assets.xcassets */; };
 		300B5AF3200F834600FC4610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300B5AF1200F834600FC4610 /* LaunchScreen.storyboard */; };
+		300B5AFB200F8E7900FC4610 /* StructureAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5AFA200F8E7900FC4610 /* StructureAndConstants.swift */; };
+		300B5B212010CD5600FC4610 /* Dynamics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5B202010CD5600FC4610 /* Dynamics.swift */; };
+		300B5B2320121F2A00FC4610 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5B2220121F2A00FC4610 /* extension.swift */; };
+		3014F9BF201327AE007C5D5E /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3014F9BE201327AE007C5D5E /* StartScene.sks */; };
+		3014F9C120132962007C5D5E /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9C020132962007C5D5E /* StartScene.swift */; };
+		3014F9C320132C74007C5D5E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9C220132C74007C5D5E /* Button.swift */; };
+		3014F9CB201359C0007C5D5E /* tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9CA201359C0007C5D5E /* tool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		300B5ADF200F834600FC4610 /* shindo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shindo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		300B5ADF200F834600FC4610 /* FeelShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeelShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		300B5AE2200F834600FC4610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		300B5AE4200F834600FC4610 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		300B5AE6200F834600FC4610 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		300B5AE8200F834600FC4610 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		300B5AE4200F834600FC4610 /* TrainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TrainScene.sks; sourceTree = "<group>"; };
+		300B5AE8200F834600FC4610 /* TrainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainScene.swift; sourceTree = "<group>"; };
 		300B5AEA200F834600FC4610 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		300B5AED200F834600FC4610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		300B5AEF200F834600FC4610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300B5AF2200F834600FC4610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		300B5AF4200F834600FC4610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		300B5AFA200F8E7900FC4610 /* StructureAndConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureAndConstants.swift; sourceTree = "<group>"; };
+		300B5B202010CD5600FC4610 /* Dynamics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamics.swift; sourceTree = "<group>"; };
+		300B5B2220121F2A00FC4610 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		3014F9BE201327AE007C5D5E /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		3014F9C020132962007C5D5E /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		3014F9C220132C74007C5D5E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		3014F9CA201359C0007C5D5E /* tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +56,7 @@
 		300B5AD6200F834600FC4610 = {
 			isa = PBXGroup;
 			children = (
-				300B5AE1200F834600FC4610 /* shindo */,
+				300B5AE1200F834600FC4610 /* FeelShake */,
 				300B5AE0200F834600FC4610 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,33 +64,79 @@
 		300B5AE0200F834600FC4610 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				300B5ADF200F834600FC4610 /* shindo.app */,
+				300B5ADF200F834600FC4610 /* FeelShake.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		300B5AE1200F834600FC4610 /* shindo */ = {
+		300B5AE1200F834600FC4610 /* FeelShake */ = {
 			isa = PBXGroup;
 			children = (
-				300B5AE2200F834600FC4610 /* AppDelegate.swift */,
-				300B5AE4200F834600FC4610 /* GameScene.sks */,
-				300B5AE6200F834600FC4610 /* Actions.sks */,
-				300B5AE8200F834600FC4610 /* GameScene.swift */,
-				300B5AEA200F834600FC4610 /* GameViewController.swift */,
-				300B5AEC200F834600FC4610 /* Main.storyboard */,
+				3014F9C8201351FF007C5D5E /* Common */,
+				3014F9C7201351D9007C5D5E /* StartScene */,
+				3014F9C62013518A007C5D5E /* TrainScene */,
+				3014F9C920135222007C5D5E /* Other */,
 				300B5AEF200F834600FC4610 /* Assets.xcassets */,
 				300B5AF1200F834600FC4610 /* LaunchScreen.storyboard */,
 				300B5AF4200F834600FC4610 /* Info.plist */,
 			);
-			path = shindo;
+			path = FeelShake;
+			sourceTree = "<group>";
+		};
+		3014F9C62013518A007C5D5E /* TrainScene */ = {
+			isa = PBXGroup;
+			children = (
+				300B5AE8200F834600FC4610 /* TrainScene.swift */,
+				300B5AE4200F834600FC4610 /* TrainScene.sks */,
+			);
+			path = TrainScene;
+			sourceTree = "<group>";
+		};
+		3014F9C7201351D9007C5D5E /* StartScene */ = {
+			isa = PBXGroup;
+			children = (
+				3014F9C020132962007C5D5E /* StartScene.swift */,
+				3014F9BE201327AE007C5D5E /* StartScene.sks */,
+			);
+			path = StartScene;
+			sourceTree = "<group>";
+		};
+		3014F9C8201351FF007C5D5E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				300B5B2220121F2A00FC4610 /* extension.swift */,
+				300B5AFA200F8E7900FC4610 /* StructureAndConstants.swift */,
+				3014F9C220132C74007C5D5E /* Button.swift */,
+				3014F9CA201359C0007C5D5E /* tool.swift */,
+				3014F9EA2014AF4D007C5D5E /* Dynamics */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3014F9C920135222007C5D5E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				300B5AEA200F834600FC4610 /* GameViewController.swift */,
+				300B5AE2200F834600FC4610 /* AppDelegate.swift */,
+				300B5AEC200F834600FC4610 /* Main.storyboard */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		3014F9EA2014AF4D007C5D5E /* Dynamics */ = {
+			isa = PBXGroup;
+			children = (
+				300B5B202010CD5600FC4610 /* Dynamics.swift */,
+			);
+			path = Dynamics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		300B5ADE200F834600FC4610 /* shindo */ = {
+		300B5ADE200F834600FC4610 /* FeelShake */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 300B5AF7200F834600FC4610 /* Build configuration list for PBXNativeTarget "shindo" */;
+			buildConfigurationList = 300B5AF7200F834600FC4610 /* Build configuration list for PBXNativeTarget "FeelShake" */;
 			buildPhases = (
 				300B5ADB200F834600FC4610 /* Sources */,
 				300B5ADC200F834600FC4610 /* Frameworks */,
@@ -88,9 +146,9 @@
 			);
 			dependencies = (
 			);
-			name = shindo;
+			name = FeelShake;
 			productName = shindo;
-			productReference = 300B5ADF200F834600FC4610 /* shindo.app */;
+			productReference = 300B5ADF200F834600FC4610 /* FeelShake.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,7 +167,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 300B5ADA200F834600FC4610 /* Build configuration list for PBXProject "shindo" */;
+			buildConfigurationList = 300B5ADA200F834600FC4610 /* Build configuration list for PBXProject "FeelShake" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,7 +180,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				300B5ADE200F834600FC4610 /* shindo */,
+				300B5ADE200F834600FC4610 /* FeelShake */,
 			);
 		};
 /* End PBXProject section */
@@ -133,10 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				300B5AEE200F834600FC4610 /* Main.storyboard in Resources */,
-				300B5AE5200F834600FC4610 /* GameScene.sks in Resources */,
+				300B5AE5200F834600FC4610 /* TrainScene.sks in Resources */,
 				300B5AF0200F834600FC4610 /* Assets.xcassets in Resources */,
+				3014F9BF201327AE007C5D5E /* StartScene.sks in Resources */,
 				300B5AF3200F834600FC4610 /* LaunchScreen.storyboard in Resources */,
-				300B5AE7200F834600FC4610 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +205,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				300B5AE9200F834600FC4610 /* GameScene.swift in Sources */,
+				300B5AE9200F834600FC4610 /* TrainScene.swift in Sources */,
+				3014F9C120132962007C5D5E /* StartScene.swift in Sources */,
 				300B5AEB200F834600FC4610 /* GameViewController.swift in Sources */,
+				3014F9C320132C74007C5D5E /* Button.swift in Sources */,
 				300B5AE3200F834600FC4610 /* AppDelegate.swift in Sources */,
+				300B5B2320121F2A00FC4610 /* extension.swift in Sources */,
+				3014F9CB201359C0007C5D5E /* tool.swift in Sources */,
+				300B5B212010CD5600FC4610 /* Dynamics.swift in Sources */,
+				300B5AFB200F8E7900FC4610 /* StructureAndConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,8 +353,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZCKYW9F25;
 				INFOPLIST_FILE = shindo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.shindo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FeelShake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -304,8 +369,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZCKYW9F25;
 				INFOPLIST_FILE = shindo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.shindo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FeelShake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		300B5ADA200F834600FC4610 /* Build configuration list for PBXProject "shindo" */ = {
+		300B5ADA200F834600FC4610 /* Build configuration list for PBXProject "FeelShake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				300B5AF5200F834600FC4610 /* Debug */,
@@ -324,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		300B5AF7200F834600FC4610 /* Build configuration list for PBXNativeTarget "shindo" */ = {
+		300B5AF7200F834600FC4610 /* Build configuration list for PBXNativeTarget "FeelShake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				300B5AF8200F834600FC4610 /* Debug */,
