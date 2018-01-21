@@ -41,7 +41,7 @@ class StartScene: SKScene {
         
         let slightlyUpperCenterY = (self.frame.maxY*0.20 + self.frame.midY * 0.8)
         // タイトルを追加
-        let titleLabel = SKLabelNode(fontNamed: "PingFangHK-Ultralight")
+        let titleLabel = SKLabelNode(fontNamed: basicFont)
         titleLabel.fontColor = UIColor.black
         titleLabel.text = "Feelshake"
         titleLabel.fontSize = 80
@@ -51,7 +51,7 @@ class StartScene: SKScene {
         self.addChild(titleLabel)
         
         // トレーニングボタン関係
-        let buttonLeft = ButtonNode(fontNamed: "PingFangHK-Light")
+        let buttonLeft = ButtonNode(fontNamed: basicFont)
         buttonLeft.fontColor = UIColor.black
         buttonLeft.text = "トレーニング"
         buttonLeft.fontSize = 30
@@ -66,7 +66,7 @@ class StartScene: SKScene {
         self.addChild(buttonLeft)
 
         // チャレンジボタンを追加
-        let buttonRight = ButtonNode(fontNamed: "PingFangHK-Light")
+        let buttonRight = ButtonNode(fontNamed: basicFont)
         buttonRight.fontColor = UIColor.black
         buttonRight.text = "チャレンジ"
         buttonRight.fontSize = 30

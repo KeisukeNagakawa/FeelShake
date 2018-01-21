@@ -44,7 +44,7 @@ class GameScene: SKScene {
         cStates = createCircleStates()
         
         // 戻るボタンを追加
-        let button = ButtonNode(fontNamed: font)
+        let button = ButtonNode(fontNamed: basicFont)
         button.fontColor = UIColor.black
         button.text = "Back"
         button.fontSize = 30
