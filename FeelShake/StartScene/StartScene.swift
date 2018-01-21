@@ -43,7 +43,7 @@ class StartScene: SKScene {
         // タイトルを追加
         let titleLabel = SKLabelNode(fontNamed: basicFont)
         titleLabel.fontColor = UIColor.black
-        titleLabel.text = "Feelshake"
+        titleLabel.text = "FeelShake"
         titleLabel.fontSize = 80
         titleLabel.position = CGPoint(
             x:self.frame.midX,
