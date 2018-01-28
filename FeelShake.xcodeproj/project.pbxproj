@@ -79,6 +79,8 @@
 				3014F9C7201351D9007C5D5E /* StartScene */,
 				3014F9C62013518A007C5D5E /* TrainScene */,
 				300B5AEF200F834600FC4610 /* Assets.xcassets */,
+				300B5AF4200F834600FC4610 /* Info.plist */,
+				300B5AF1200F834600FC4610 /* LaunchScreen.storyboard */,
 				30D19A52201D82A3009451BB /* Others */,
 			);
 			path = FeelShake;
@@ -144,8 +146,6 @@
 		30D19A52201D82A3009451BB /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				300B5AF1200F834600FC4610 /* LaunchScreen.storyboard */,
-				300B5AF4200F834600FC4610 /* Info.plist */,
 			);
 			path = Others;
 			sourceTree = "<group>";
