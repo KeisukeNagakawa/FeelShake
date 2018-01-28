@@ -14,15 +14,14 @@
 		300B5AEE200F834600FC4610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300B5AEC200F834600FC4610 /* Main.storyboard */; };
 		300B5AF0200F834600FC4610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300B5AEF200F834600FC4610 /* Assets.xcassets */; };
 		300B5AF3200F834600FC4610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300B5AF1200F834600FC4610 /* LaunchScreen.storyboard */; };
-		300B5AFB200F8E7900FC4610 /* PyisicalParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5AFA200F8E7900FC4610 /* PyisicalParams.swift */; };
+		300B5AFB200F8E7900FC4610 /* Pyisics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5AFA200F8E7900FC4610 /* Pyisics.swift */; };
 		300B5B212010CD5600FC4610 /* Dynamics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5B202010CD5600FC4610 /* Dynamics.swift */; };
-		300B5B2320121F2A00FC4610 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B5B2220121F2A00FC4610 /* extension.swift */; };
-		300F6BA72014BB1400728459 /* DisplayParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F6BA62014BB1400728459 /* DisplayParams.swift */; };
+		300F6BA72014BB1400728459 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F6BA62014BB1400728459 /* Display.swift */; };
 		3014F9BF201327AE007C5D5E /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3014F9BE201327AE007C5D5E /* StartScene.sks */; };
 		3014F9C120132962007C5D5E /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9C020132962007C5D5E /* StartScene.swift */; };
 		3014F9C320132C74007C5D5E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9C220132C74007C5D5E /* Button.swift */; };
-		3014F9CB201359C0007C5D5E /* tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9CA201359C0007C5D5E /* tool.swift */; };
-		30262F1D201B72580054491B /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30262F1C201B72580054491B /* StopWatch.swift */; };
+		3014F9CB201359C0007C5D5E /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9CA201359C0007C5D5E /* Tools.swift */; };
+		30262F1D201B72580054491B /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30262F1C201B72580054491B /* Stopwatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,15 +34,14 @@
 		300B5AEF200F834600FC4610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300B5AF2200F834600FC4610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		300B5AF4200F834600FC4610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		300B5AFA200F8E7900FC4610 /* PyisicalParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyisicalParams.swift; sourceTree = "<group>"; };
+		300B5AFA200F8E7900FC4610 /* Pyisics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pyisics.swift; sourceTree = "<group>"; };
 		300B5B202010CD5600FC4610 /* Dynamics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamics.swift; sourceTree = "<group>"; };
-		300B5B2220121F2A00FC4610 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
-		300F6BA62014BB1400728459 /* DisplayParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayParams.swift; sourceTree = "<group>"; };
+		300F6BA62014BB1400728459 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		3014F9BE201327AE007C5D5E /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		3014F9C020132962007C5D5E /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		3014F9C220132C74007C5D5E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		3014F9CA201359C0007C5D5E /* tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tool.swift; sourceTree = "<group>"; };
-		30262F1C201B72580054491B /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
+		3014F9CA201359C0007C5D5E /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		30262F1C201B72580054491B /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,14 +74,12 @@
 		300B5AE1200F834600FC4610 /* FeelShake */ = {
 			isa = PBXGroup;
 			children = (
-				30262F1B201B723F0054491B /* StopWatch */,
 				3014F9C8201351FF007C5D5E /* Common */,
+				3014F9C920135222007C5D5E /* GameViewController */,
 				3014F9C7201351D9007C5D5E /* StartScene */,
 				3014F9C62013518A007C5D5E /* TrainScene */,
-				3014F9C920135222007C5D5E /* Other */,
 				300B5AEF200F834600FC4610 /* Assets.xcassets */,
-				300B5AF1200F834600FC4610 /* LaunchScreen.storyboard */,
-				300B5AF4200F834600FC4610 /* Info.plist */,
+				30D19A52201D82A3009451BB /* Others */,
 			);
 			path = FeelShake;
 			sourceTree = "<group>";
@@ -109,40 +105,49 @@
 		3014F9C8201351FF007C5D5E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				300B5B2220121F2A00FC4610 /* extension.swift */,
-				300B5AFA200F8E7900FC4610 /* PyisicalParams.swift */,
-				300F6BA62014BB1400728459 /* DisplayParams.swift */,
-				3014F9C220132C74007C5D5E /* Button.swift */,
-				3014F9CA201359C0007C5D5E /* tool.swift */,
-				3014F9EA2014AF4D007C5D5E /* Dynamics */,
+				30D19A51201D8251009451BB /* Classes */,
+				30D19A50201D824C009451BB /* Params */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		3014F9C920135222007C5D5E /* Other */ = {
+		3014F9C920135222007C5D5E /* GameViewController */ = {
 			isa = PBXGroup;
 			children = (
 				300B5AEA200F834600FC4610 /* GameViewController.swift */,
 				300B5AE2200F834600FC4610 /* AppDelegate.swift */,
 				300B5AEC200F834600FC4610 /* Main.storyboard */,
 			);
-			path = Other;
+			path = GameViewController;
 			sourceTree = "<group>";
 		};
-		3014F9EA2014AF4D007C5D5E /* Dynamics */ = {
+		30D19A50201D824C009451BB /* Params */ = {
 			isa = PBXGroup;
 			children = (
+				300B5AFA200F8E7900FC4610 /* Pyisics.swift */,
+				300F6BA62014BB1400728459 /* Display.swift */,
+			);
+			path = Params;
+			sourceTree = "<group>";
+		};
+		30D19A51201D8251009451BB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3014F9C220132C74007C5D5E /* Button.swift */,
+				3014F9CA201359C0007C5D5E /* Tools.swift */,
+				30262F1C201B72580054491B /* Stopwatch.swift */,
 				300B5B202010CD5600FC4610 /* Dynamics.swift */,
 			);
-			path = Dynamics;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		30262F1B201B723F0054491B /* StopWatch */ = {
+		30D19A52201D82A3009451BB /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				30262F1C201B72580054491B /* StopWatch.swift */,
+				300B5AF1200F834600FC4610 /* LaunchScreen.storyboard */,
+				300B5AF4200F834600FC4610 /* Info.plist */,
 			);
-			path = StopWatch;
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,17 +224,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				300F6BA72014BB1400728459 /* DisplayParams.swift in Sources */,
-				30262F1D201B72580054491B /* StopWatch.swift in Sources */,
+				300F6BA72014BB1400728459 /* Display.swift in Sources */,
+				30262F1D201B72580054491B /* Stopwatch.swift in Sources */,
 				300B5AE9200F834600FC4610 /* TrainScene.swift in Sources */,
 				3014F9C120132962007C5D5E /* StartScene.swift in Sources */,
 				300B5AEB200F834600FC4610 /* GameViewController.swift in Sources */,
 				3014F9C320132C74007C5D5E /* Button.swift in Sources */,
 				300B5AE3200F834600FC4610 /* AppDelegate.swift in Sources */,
-				300B5B2320121F2A00FC4610 /* extension.swift in Sources */,
-				3014F9CB201359C0007C5D5E /* tool.swift in Sources */,
+				3014F9CB201359C0007C5D5E /* Tools.swift in Sources */,
 				300B5B212010CD5600FC4610 /* Dynamics.swift in Sources */,
-				300B5AFB200F8E7900FC4610 /* PyisicalParams.swift in Sources */,
+				300B5AFB200F8E7900FC4610 /* Pyisics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
