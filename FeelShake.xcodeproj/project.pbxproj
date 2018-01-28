@@ -22,7 +22,8 @@
 		3014F9C320132C74007C5D5E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9C220132C74007C5D5E /* Button.swift */; };
 		3014F9CB201359C0007C5D5E /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9CA201359C0007C5D5E /* Tools.swift */; };
 		30262F1D201B72580054491B /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30262F1C201B72580054491B /* Stopwatch.swift */; };
-		30D19A54201D8B0E009451BB /* StartSceneObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D19A53201D8B0E009451BB /* StartSceneObjects.swift */; };
+		30D19A54201D8B0E009451BB /* GameSceneParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D19A53201D8B0E009451BB /* GameSceneParts.swift */; };
+		30D19A56201DC1B4009451BB /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D19A55201DC1B4009451BB /* Countdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,8 @@
 		3014F9C220132C74007C5D5E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3014F9CA201359C0007C5D5E /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		30262F1C201B72580054491B /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
-		30D19A53201D8B0E009451BB /* StartSceneObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSceneObjects.swift; sourceTree = "<group>"; };
+		30D19A53201D8B0E009451BB /* GameSceneParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneParts.swift; sourceTree = "<group>"; };
+		30D19A55201DC1B4009451BB /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +104,6 @@
 			children = (
 				3014F9C020132962007C5D5E /* StartScene.swift */,
 				3014F9BE201327AE007C5D5E /* StartScene.sks */,
-				30D19A53201D8B0E009451BB /* StartSceneObjects.swift */,
 			);
 			path = StartScene;
 			sourceTree = "<group>";
@@ -140,8 +141,10 @@
 			children = (
 				3014F9C220132C74007C5D5E /* Button.swift */,
 				3014F9CA201359C0007C5D5E /* Tools.swift */,
-				30262F1C201B72580054491B /* Stopwatch.swift */,
 				300B5B202010CD5600FC4610 /* Dynamics.swift */,
+				30D19A53201D8B0E009451BB /* GameSceneParts.swift */,
+				30262F1C201B72580054491B /* Stopwatch.swift */,
+				30D19A55201DC1B4009451BB /* Countdown.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -235,9 +238,10 @@
 				3014F9C320132C74007C5D5E /* Button.swift in Sources */,
 				300B5AE3200F834600FC4610 /* AppDelegate.swift in Sources */,
 				3014F9CB201359C0007C5D5E /* Tools.swift in Sources */,
-				30D19A54201D8B0E009451BB /* StartSceneObjects.swift in Sources */,
+				30D19A54201D8B0E009451BB /* GameSceneParts.swift in Sources */,
 				300B5B212010CD5600FC4610 /* Dynamics.swift in Sources */,
 				300B5AFB200F8E7900FC4610 /* Pyisics.swift in Sources */,
+				30D19A56201DC1B4009451BB /* Countdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,22 +19,24 @@ class StartScene: SKScene, StartSceneDelegateProtocol{
     private var cNodes : [SKShapeNode?] = []
     private var cStates:[CircleState] = []
     private var last:Double?
-    var center = CGPoint(x:0.0, y:0.0)
-    var circleCenter  = CGPoint(x:0.0, y:0.0)
+    private var center = CGPoint(x:0.0, y:0.0)
+    private var circleCenter  = CGPoint(x:0.0, y:0.0)
 
     override func didMove(to view: SKView) {
-        print("startScene:\(self.frame.minX), \(self.frame.maxX)")
         // 初期設定
         self.backgroundColor = bgColor
         self.center = CGPoint(x:self.frame.midX, y:self.frame.midY)
         self.circleCenter = CGPoint(
             x:self.frame.midX,
             y:0.5*self.frame.midY + 0.5*self.frame.maxY)
-        let startObj = StartSceneObjects(frame: self.frame)
+        let startObj = GameSceneParts(frame: self.frame)
         startObj.delegate = self
 
         // 円のオブジェを追加
-        circle = startObj.CreateStartSceneCircleNode()
+        let upperCenter = CGPoint(
+            x: frame.midX,
+            y: 0.6*frame.midY + 0.4*frame.maxY)
+        circle = startObj.CreateStartSceneCircleNode(position: upperCenter)
         self.addChild(self.circle!)
         cStates = createCircleStates(num:1)
         

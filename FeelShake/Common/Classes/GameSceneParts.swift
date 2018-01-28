@@ -13,33 +13,26 @@ import SpriteKit
 protocol StartSceneDelegateProtocol {
     func addChild(_ node: SKNode) -> Void
     var view: SKView? { get }
-    
 }
 
-
-
-class StartSceneObjects{
+class GameSceneParts{
     let frame:CGRect
     let size:CGSize
     let center:CGPoint
-    let upperCenter:CGPoint
 
     private var circle : SKShapeNode?
     var delegate: StartSceneDelegateProtocol!
-
-
 
     init(frame:CGRect) {
         self.frame = frame
         self.size = frame.size
         self.center = CGPoint(x: frame.midX, y:frame.midY)
-        self.upperCenter = CGPoint(
-            x: frame.midX,
-            y: 0.5*frame.midY + 0.5*frame.maxY)
-        
     }
     
-    func CreateStartSceneCircleNode() -> SKShapeNode? {
+    
+    
+    // 円のオブジェを描くための、CircleNodeを返す
+    func CreateStartSceneCircleNode(position:CGPoint) -> SKShapeNode? {
         let w = (self.frame.width + self.frame.height) * 0.40
         self.circle = SKShapeNode.init(
             rectOf: CGSize.init(width: w * dConst.radRatio, height: w * dConst.radRatio),
@@ -47,12 +40,12 @@ class StartSceneObjects{
         self.circle?.fillColor = UIColor.gray
         self.circle?.alpha = 0.5
         self.circle?.lineWidth = 0.0
-        self.circle?.position = self.upperCenter
+        self.circle?.position = position
         return circle
 
     }
     
-    // 依頼人クラスでもある
+    // タイトルを描く　＊依頼人クラスでもあるよ
     func drawTitle(fontNamed:String="HiraKakuProN-W3",
                    color:UIColor=UIColor.black,
                    text:String,
@@ -66,7 +59,7 @@ class StartSceneObjects{
         delegate.addChild(titleLabel)
     }
     
-    // 依頼人クラスでもある
+    // ボタンを描く　＊依頼人クラスでもあるよ
     func drawButton(withText text:String,
                     fontName: String = basicFont,
                     color:UIColor = UIColor.black,
@@ -86,6 +79,6 @@ class StartSceneObjects{
 
         delegate.addChild(button)
     }
-  
 
 }
+

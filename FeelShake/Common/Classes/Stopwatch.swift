@@ -12,7 +12,14 @@ import SpriteKit
 
 
 // MARK: Stopwatch
+protocol TrainSceneStopwatchDelegateProtocol {
+    var stopwatchLabel:SKLabelNode {set get}
+    
+}
+
 class Stopwatch: NSObject {
+    
+    var delegate: TrainSceneStopwatchDelegateProtocol!
     
     // Timer
     fileprivate var timer = Timer()
@@ -129,7 +136,11 @@ class Stopwatch: NSObject {
      Starts the stopwatch, or resumes it if it was paused
      */
     func start() {
+        print("start is called")
+        print("time.isValid: \(timer.isValid)")
         if !timer.isValid {
+            print("inside start if clause")
+            print("wasPause:\(wasPause)")
             timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(Stopwatch.updateTime), userInfo: nil, repeats: true)
             
             if wasPause {
@@ -223,14 +234,13 @@ class LabelStopwatch: Stopwatch {
     
     override fileprivate func updateTime() {
         super.updateTime()
-        
         //concatenate minuets, seconds and milliseconds as assign it to the UILabel
-        label.text = "\(strSeconds):\(strTenthsOfSecond)"
+        self.delegate.stopwatchLabel.text = "\(strSeconds):\(strTenthsOfSecond)"
     }
     
     override fileprivate func resetTimer() {
         super.resetTimer()
-        label.text = "\(strSeconds):\(strTenthsOfSecond)"
+        self.delegate.stopwatchLabel.text = "\(strSeconds):\(strTenthsOfSecond)"
     }
     
 }

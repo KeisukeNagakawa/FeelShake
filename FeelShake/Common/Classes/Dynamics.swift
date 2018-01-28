@@ -11,6 +11,7 @@ import SpriteKit
 import GameplayKit
 
 
+
 func createCircleStates(num:Int = dConst.nCircle) -> [CircleState]{
     /*
      共通パラメタのdConst.nCircleの数だけ、円の状態（CState)を作り返却する
@@ -30,6 +31,27 @@ func createCircleStates(num:Int = dConst.nCircle) -> [CircleState]{
         )
     }
     return res
+}
+
+func createInitCircleNodes(num:Int = dConst.nCircle, size:CGSize, frame:CGRect) -> [SKShapeNode] {
+    let w = (size.width + size.height) * 0.05 // size is 5% of the view size
+    let circle = SKShapeNode.init(
+        rectOf: CGSize.init(width: w * dConst.radRatio, height: w * dConst.radRatio),
+        cornerRadius: w * 0.5 * dConst.radRatio)
+    circle.fillColor = .blue
+    circle.lineWidth = 0.0
+    circle.alpha = 0.5
+    var cNodes:[SKShapeNode] = []
+    var pos:[CGPoint] = []
+    // 円の1つ1つの初期値を決定する
+    for i in 0..<num {
+        pos.append(CGPoint(x:frame.midX, y:frame.midY))
+    }
+    for i in 0..<num {
+        cNodes.append(circle.copy() as! SKShapeNode)
+        cNodes[i].position = pos[i]
+    }
+    return cNodes
 }
 
 
