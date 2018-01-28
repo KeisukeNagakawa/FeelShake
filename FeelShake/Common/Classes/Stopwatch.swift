@@ -13,7 +13,9 @@ import SpriteKit
 
 // MARK: Stopwatch
 protocol TrainSceneStopwatchDelegateProtocol {
+    var startFlag:Bool {set get}
     var stopwatchLabel:SKLabelNode {set get}
+
     
 }
 
@@ -114,7 +116,10 @@ class Stopwatch: NSObject {
         strTenthsOfSecond = String(format: "%02d", numTenthsOfSecond)
         timeText = "\(strSeconds):\(strTenthsOfSecond)"
         
-        if strTenthsOfSecond == "00" && strSeconds == "00" { pause() }
+        if strTenthsOfSecond == "00" && strSeconds == "00" {
+            pause()
+            delegate.startFlag = false
+        }
     }
     
     // endAction
@@ -136,11 +141,7 @@ class Stopwatch: NSObject {
      Starts the stopwatch, or resumes it if it was paused
      */
     func start() {
-        print("start is called")
-        print("time.isValid: \(timer.isValid)")
         if !timer.isValid {
-            print("inside start if clause")
-            print("wasPause:\(wasPause)")
             timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(Stopwatch.updateTime), userInfo: nil, repeats: true)
             
             if wasPause {
@@ -242,6 +243,7 @@ class LabelStopwatch: Stopwatch {
         super.resetTimer()
         self.delegate.stopwatchLabel.text = "\(strSeconds):\(strTenthsOfSecond)"
     }
+    
     
 }
 

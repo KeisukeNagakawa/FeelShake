@@ -39,7 +39,7 @@ class TrainScene: SKScene, StartSceneDelegateProtocol, TrainSceneCountdownDelega
         stopwatchLabel.position = CGPoint(x: self.frame.midX, y:0.1*self.frame.midY+0.9*self.frame.maxY)
         stopwatchLabel.fontColor = SKColor.black
         self.addChild(stopwatchLabel)
-
+        
         
         // Countdown
         let cd = Countdown(position: CGPoint(x:self.frame.midX, y:self.frame.midY))
