@@ -4,6 +4,7 @@ class ButtonNode: SKLabelNode {
     
     var didTapButtonClosure: (() -> Void)?
     
+
     override init() {
         super.init()
         isUserInteractionEnabled = true
@@ -11,6 +12,7 @@ class ButtonNode: SKLabelNode {
     override init(fontNamed fontName: String?) {
         super.init(fontNamed: fontName)
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -11,13 +11,13 @@ import SpriteKit
 import GameplayKit
 
 
-func createCircleStates() -> [CircleState]{
+func createCircleStates(num:Int = dConst.nCircle) -> [CircleState]{
     /*
-     複数の円の状態を作る
+     共通パラメタのdConst.nCircleの数だけ、円の状態（CState)を作り返却する
      */
-    // repeatingで入れないこと！！
+    // repeatingで入れないこと！下記のようにForで入れること。
     var res:[CircleState] = []
-    for _ in 0..<dConst.nCircle {
+    for _ in 0..<num {
         res.append(
             CircleState(
                 acc: CGPoint(x:0.0, y:0.0),
@@ -100,7 +100,11 @@ func updateState(userAcc:CGPoint, state:CircleState, center:CGPoint, pattern:Mov
     return resState
 }
 
-func updateStates(userAcc:CGPoint, states: inout [CircleState],  center:CGPoint, pattern: MovingPattern){
+func updateStates(
+    userAcc:CGPoint=CGPoint(x:0.0, y:0.0),
+    states: inout [CircleState],
+    center:CGPoint,
+    pattern: MovingPattern){
     /*
      複数の円の座標を更新するupdateStateのラッパー
      */

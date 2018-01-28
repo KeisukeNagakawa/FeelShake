@@ -100,7 +100,7 @@ class TrainScene: SKScene {
         let button = ButtonNode(fontNamed: basicFont)
         button.fontColor = UIColor.black
         button.text = "Back"
-        button.fontSize = fontSizeForMenu
+        button.fontSize = fontSizeForButton
         button.position = CGPoint(x:self.frame.midX, y:self.frame.midY*0.2+self.frame.minY*0.8)
         button.didTapButtonClosure = {
             let scene = StartScene(size: self.scene!.size)
