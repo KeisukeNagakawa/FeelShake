@@ -22,6 +22,7 @@
 		3014F9C120132962007C5D5E /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9C020132962007C5D5E /* StartScene.swift */; };
 		3014F9C320132C74007C5D5E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9C220132C74007C5D5E /* Button.swift */; };
 		3014F9CB201359C0007C5D5E /* tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014F9CA201359C0007C5D5E /* tool.swift */; };
+		30262F1D201B72580054491B /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30262F1C201B72580054491B /* StopWatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3014F9C020132962007C5D5E /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		3014F9C220132C74007C5D5E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3014F9CA201359C0007C5D5E /* tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tool.swift; sourceTree = "<group>"; };
+		30262F1C201B72580054491B /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		300B5AE1200F834600FC4610 /* FeelShake */ = {
 			isa = PBXGroup;
 			children = (
+				30262F1B201B723F0054491B /* StopWatch */,
 				3014F9C8201351FF007C5D5E /* Common */,
 				3014F9C7201351D9007C5D5E /* StartScene */,
 				3014F9C62013518A007C5D5E /* TrainScene */,
@@ -132,6 +135,14 @@
 				300B5B202010CD5600FC4610 /* Dynamics.swift */,
 			);
 			path = Dynamics;
+			sourceTree = "<group>";
+		};
+		30262F1B201B723F0054491B /* StopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				30262F1C201B72580054491B /* StopWatch.swift */,
+			);
+			path = StopWatch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				300F6BA72014BB1400728459 /* DisplayParams.swift in Sources */,
+				30262F1D201B72580054491B /* StopWatch.swift in Sources */,
 				300B5AE9200F834600FC4610 /* TrainScene.swift in Sources */,
 				3014F9C120132962007C5D5E /* StartScene.swift in Sources */,
 				300B5AEB200F834600FC4610 /* GameViewController.swift in Sources */,

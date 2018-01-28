@@ -18,26 +18,44 @@ class ButtonNode: SKLabelNode {
     //MARK: - UIResponder
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        setHighlighted(highlighted: true)
+        setHighlightedAndShaked(highlighted: true)
     }
     override func touchesCancelled(_ touches: Set<UITouch>?, with event: UIEvent?) {
-        setHighlighted(highlighted: false)
+        //setHighlightedAndShaked(highlighted: false)
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        setHighlighted(highlighted: false)
-        didTapButtonClosure?()
+        setWaited(for: Double(0.40))
     }
     
     //MARK: - private
-    
-    private func setHighlighted(highlighted: Bool) {
+    private func setWaited(for time:Double){
+
+        let wait = SKAction.wait(forDuration: time)
+        run(wait, completion: didTapButtonClosure!)
+    }
+    private func setHighlightedAndShaked(highlighted: Bool) {
         removeAllActions()
-        let alpha: CGFloat = highlighted ? 0.5 : 0
-        let color: UIColor = UIColor(white: 1.0, alpha: alpha)
-        let highlightAction: SKAction = SKAction.customAction(withDuration: 0.24) { (node, elapsedTime) -> Void in
-            self.fontColor = color
+        var randActions:[SKAction]=[]
+        var randAction:SKAction
+        var randx, randy:CGFloat
+        let randDt:Double = 0.01
+        let originalPos = self.position
+        var s:Int = 1
+        let moveToOriginAction = SKAction.move(to: originalPos, duration: randDt)
+        for _ in 0..<10 {
+            s *= -1
+            randx = (cgRand()-0.5) * 0.1 // -0.05~0.05
+            randy = (cgRand()-0.5) * 0.1 // -0.05~0.05
+            randAction = SKAction.moveBy(
+                x: self.position.x * randx,
+                y: self.position.y * randy,
+                duration: randDt)
+            randActions.append(randAction)
+            randActions.append(moveToOriginAction)//逐一戻る
         }
-        run(highlightAction)
+        print(self.position)
+        randActions.append(SKAction.wait(forDuration: 10.0))
+        let sequence = SKAction.sequence(randActions)
+        run(sequence)
     }
 }

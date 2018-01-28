@@ -17,13 +17,13 @@ func createCircleStates() -> [CircleState]{
      */
     // repeatingで入れないこと！！
     var res:[CircleState] = []
-    for i in 0..<dConst.nCircle {
+    for _ in 0..<dConst.nCircle {
         res.append(
             CircleState(
                 acc: CGPoint(x:0.0, y:0.0),
                 vel: CGPoint(x:CGFloat(arc4random_uniform(10))/1.0-CGFloat(4.5), y:CGFloat(arc4random_uniform(10))/1.0-CGFloat(4.5)),
                 dis: CGPoint(x:0.0, y:0.0),
-                pos: CGPoint(x:i, y:i),
+                pos: CGPoint(x:0.0, y:0.0),
                 rad: CGFloat(10.0),
                 col: UIColor.black
             )
@@ -51,15 +51,16 @@ func updateState(userAcc:CGPoint, state:CircleState, center:CGPoint, pattern:Mov
         updatedRad = state.rad
         updatedCol = state.col
         capping(vector: &updatedVel, velocityLimit: velocityLimit)
-/*    case MovingPattern.liquid:
-        updatedAcc = LJPotentialForce(forPoint:state , fromPoints: oldStates)
-        updatedVel = LJPotentialDis(forPoint: state, ofVelocity: state.vel, withOldForce: <#T##CGFloat#>)
-        updatedDis = integralVel(withOldDis: state.dis , oldVel: state.vel, curAcc: updatedAcc)
+    case MovingPattern.liquid:
+        updatedAcc = LJPotentialForce(forCircle:state , fromCircles: states)
+        updatedVel = LJPotentialDis(forPoint: state.pos, ofVelocity: state.vel, withOldForce: state.acc)
+        updatedDis = LJPotentialDis(forPoint: state.pos, ofVelocity: state.vel, withOldForce: state.acc)
         updatedPos = disToPos(center:center, dis: updatedDis)
         updatedRad = state.rad
         updatedCol = state.col
-        capping(vector: &updatedVel)
- */
+        capping(vector: &updatedVel, velocityLimit: velocityLimit)
+
+ 
     case MovingPattern.start:
         updatedAcc = CGPoint(
             x:(CGFloat(Float(arc4random_uniform(10))/Float(10.0)-Float(4.5)) - pConst.k_spr_start * state.dis.x)*0.5,
@@ -68,6 +69,10 @@ func updateState(userAcc:CGPoint, state:CircleState, center:CGPoint, pattern:Mov
         randomizeDirection(ofVector: &updatedAcc)
         updatedVel = integralAcc(withOldDis: state.dis, oldVel: state.vel, curAcc: updatedAcc)
         updatedDis = integralVel(withOldDis: state.dis , oldVel: state.vel, curAcc: updatedAcc)
+        updatedDis = CGPoint(
+            x:(cgRand()-0.5)*0.1,
+            y:(cgRand()-0.5)*0.1
+        )
         updatedPos = disToPos(center:center, dis: updatedDis)
         updatedRad = state.rad
         updatedCol = state.col
@@ -92,8 +97,6 @@ func updateState(userAcc:CGPoint, state:CircleState, center:CGPoint, pattern:Mov
         rad: updatedRad,
         col: updatedCol
     )
-    
-    
     return resState
 }
 
@@ -193,12 +196,14 @@ func LJPotentialForce_ij(I:CGPoint, J:CGPoint) -> CGPoint {
     return Fij
 }
 
-func LJPotentialForce(forPoint I:CGPoint, fromPoints G:[CGPoint]) -> CGPoint {
+func LJPotentialForce(forCircle II:CircleState, fromCircles GG:[CircleState]) -> CGPoint {
     /*
      ある点に対する力（実質加速度）を計算する
      !! Gは更新させる前のものを利用すること
      参考：http://ceram.material.tohoku.ac.jp/~takamura/class/sozo/node20.html
      */
+    let I = II.pos
+    let G = GG.map{ $0.pos }
     let n = G.count
     var F = CGPoint(x:0.0, y:0.0)
     for i in 0..<n {
@@ -209,7 +214,7 @@ func LJPotentialForce(forPoint I:CGPoint, fromPoints G:[CGPoint]) -> CGPoint {
     return F
 }
 
-func LJPotentialDis(forPoint I: CGPoint, ofVelocity vel: CGPoint,  withOldForce F: CGFloat) -> CGPoint {
+func LJPotentialDis(forPoint I: CGPoint, ofVelocity vel: CGPoint,  withOldForce F: CGPoint) -> CGPoint {
     /*
      ある点に対する更新された変位 速度ベルレのアルゴリズム
      ・OldForceを使うこと！

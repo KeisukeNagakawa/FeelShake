@@ -14,3 +14,9 @@ func calcDistance(I:CGPoint, J:CGPoint) -> CGFloat {
     let dis = I - J
     return CGFloat(sqrt(Double(dis.x * dis.x + dis.y * dis.y)))
 }
+
+func cgRand() -> CGFloat {
+    // return 0-1 CGFloat at random
+    let rand = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+    return rand
+}
