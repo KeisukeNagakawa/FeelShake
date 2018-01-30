@@ -74,10 +74,15 @@ class GameSceneParts{
         button.position = position
         button.didTapButtonClosure = {
             self.delegate.view!.presentScene(
-                scene, transition: SKTransition.fade(with: UIColor.white, duration: transitionTime))
+                scene, transition: transition)
         }
 
         delegate.addChild(button)
+    }
+    
+    // 遷移する
+    func onlyTransition(to scene:SKScene, transition: SKTransition = SKTransition.fade(with: UIColor.white, duration: transitionTime)){
+        self.delegate.view!.presentScene(scene, transition:transition)
     }
 
 }

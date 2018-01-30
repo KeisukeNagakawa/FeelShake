@@ -11,19 +11,24 @@ import GameplayKit
 
 
 
-class TrainScene: SKScene, StartSceneDelegateProtocol, TrainSceneCountdownDelegateProtocol,TrainSceneStopwatchDelegateProtocol {
+class TrainScene: SKScene, StartSceneDelegateProtocol,TrainSceneCountdownDelegateProtocol,TrainSceneStopwatchDelegateProtocol {
     
     private var circle : SKShapeNode?
     private var cNodes : [SKShapeNode?] = []
     private var cStates:[CircleState] = []
     private var last:Double?
+    private var finishedTime:Double?
+
     private var lastForSW:Double?
     var center = CGPoint(x:0.0, y:0.0)
-    // カウントダウン用のパラメタ
-    var startFlag : Bool = false
     // stopwatch用のパラメタ
+    var stopwatchOnFlag : Bool = false
+    var finishedFlag : Bool = false
     var stopwatch =  LabelStopwatch(label: SKLabelNode(text: "") )
     var stopwatchLabel:SKLabelNode = SKLabelNode(fontNamed: timerFont)
+    
+    var trainParts = GameSceneParts(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+
     
 
 
@@ -34,11 +39,12 @@ class TrainScene: SKScene, StartSceneDelegateProtocol, TrainSceneCountdownDelega
         
         // ストップウォッチを追加
         stopwatch.delegate = self
-        stopwatchLabel.fontSize = fontSizeForCountDown
+        stopwatchLabel.fontSize = 60
         stopwatchLabel.text = "15:00"
         stopwatchLabel.position = CGPoint(x: self.frame.midX, y:0.1*self.frame.midY+0.9*self.frame.maxY)
         stopwatchLabel.fontColor = SKColor.black
         self.addChild(stopwatchLabel)
+        
         
         
         // Countdown
@@ -55,15 +61,14 @@ class TrainScene: SKScene, StartSceneDelegateProtocol, TrainSceneCountdownDelega
         cStates = createCircleStates()
         
         
-        // トレーニングボタン関係
-        let trainParts = GameSceneParts(frame: self.frame)
+        // 戻るボタン関係
+        trainParts = GameSceneParts(frame: self.frame)
         trainParts.delegate = self
         trainParts.drawButton(
             withText: "Back",
             position: CGPoint( x: self.frame.midX, y: self.frame.midY*0.2 + self.frame.minY*0.8),
             moveTo: StartScene(size: self.scene!.size))
-
-
+        
 
 
     }
@@ -78,7 +83,7 @@ class TrainScene: SKScene, StartSceneDelegateProtocol, TrainSceneCountdownDelega
         if last == nil { last = currentTime }
         // 先の時間よりもdtだけ経過したらループ内部を実行
         // （だいたいdtおきに実行）
-        if currentTime - last! >= Double(pConst.dt) && self.startFlag == true {
+        if currentTime - last! >= Double(pConst.dt) && self.stopwatchOnFlag == true {
             //--------loop---------------
             // 座標の更新
             updateStates(states: &cStates, center: center, pattern:MovingPattern.gas)
@@ -89,6 +94,23 @@ class TrainScene: SKScene, StartSceneDelegateProtocol, TrainSceneCountdownDelega
             //-----------------------
             last! = currentTime
         }
+        
+        // ストップウォッチがゼロになった時の挙動
+        if finishedFlag == true {
+            //trainParts.drawtitle(currentTime
+            trainParts.drawTitle(fontNamed:"Avenir-BlackOblique", text: "Finish!!", fontSize:200, position:  center)
+            if finishedTime == nil {
+                finishedTime = currentTime
+            }
+            
+        }
+        // Finish!!を表示して、2秒後に遷移
+        if finishedTime != nil && (currentTime - finishedTime! >= Double(2.0)) {
+            trainParts.onlyTransition(to: StartScene(size: self.scene!.size))
+        }
+
+        
+        
     }
 }
 

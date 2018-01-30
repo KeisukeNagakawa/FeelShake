@@ -13,8 +13,9 @@ import SpriteKit
 
 // MARK: Stopwatch
 protocol TrainSceneStopwatchDelegateProtocol {
-    var startFlag:Bool {set get}
+    var stopwatchOnFlag:Bool {set get}
     var stopwatchLabel:SKLabelNode {set get}
+    var finishedFlag:Bool {set get}
 
     
 }
@@ -118,7 +119,8 @@ class Stopwatch: NSObject {
         
         if strTenthsOfSecond == "00" && strSeconds == "00" {
             pause()
-            delegate.startFlag = false
+            delegate.stopwatchOnFlag = false
+            delegate.finishedFlag = true
         }
     }
     

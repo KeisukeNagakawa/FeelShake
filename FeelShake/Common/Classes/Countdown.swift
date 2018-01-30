@@ -17,7 +17,7 @@ protocol TrainSceneCountdownDelegateProtocol {
     var stopwatch: LabelStopwatch {get set}
 //    var stopwatch =  LabelStopwatch(label: SKLabelNode(text: "") )
 
-    var startFlag:Bool {set get}
+    var stopwatchOnFlag:Bool {set get}
     
 //    var view: SKView? { get }
 
@@ -25,8 +25,8 @@ protocol TrainSceneCountdownDelegateProtocol {
 
 class Countdown {
 
-    let countdownLabel = SKLabelNode.init(fontNamed: basicFont)
-    var startFlag = false
+    let countdownLabel = SKLabelNode.init(fontNamed: "Avenir-BlackOblique")
+    var stopwatchOnFlag = false
     var count:Int = countDownTime
     var position:CGPoint
     var delegate: TrainSceneCountdownDelegateProtocol!
@@ -43,7 +43,7 @@ class Countdown {
         }else {
             self.countdownLabel.text = "START"
             self.countdownLabel.fontSize = countdownLabel.fontSize * 0.5
-            delegate.startFlag = true
+            delegate.stopwatchOnFlag = true
             print(delegate.stopwatch)
             delegate.stopwatch.start()
 

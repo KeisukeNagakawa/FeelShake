@@ -15,7 +15,6 @@ let timerFont = "Courier" // 等幅
 let bgColor = UIColor.init(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
 let fontSizeForButton:CGFloat = 40.0
 let countDownTime:Int = 3
-let fontSizeForCountDown:CGFloat = 50.0
 
 
 let transitionTime:Double = 1.0
